@@ -4,8 +4,11 @@
     <string name="login2">faculty login</string>
     <string name="profile">View Profile</string>
     <string name="attendance">View Attendance</string>
-    <string name="Username">Username/gmail</string>
+    <string name="Username">Username</string>
     <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="register">Registration</string>
 
     <string name="profileImgDisc">ProfileImage</string>
+    <string name="firstreg">OR Register for the first time</string>
 </resources>

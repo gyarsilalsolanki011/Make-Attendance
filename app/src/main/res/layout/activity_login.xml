@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="@drawable/login_background"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/icon_account_circle"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Username"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:id="@+id/username_input"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:id="@+id/password_input" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/teal_200"
+        android:padding="18dp"
+        android:layout_margin="32dp"
+        android:textSize="20sp"
+        android:id="@+id/login_btn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firstreg"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/teal_200"
+        android:padding="18dp"
+        android:layout_margin="32dp"
+        android:textSize="20sp"
+        android:id="@+id/register_btn"/>
+
+</LinearLayout>
