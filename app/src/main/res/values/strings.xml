@@ -8,6 +8,8 @@
     <string name="password">Password</string>
     <string name="login">login</string>
     <string name="register">Registration</string>
+    <string name="btnTxt">Submit</string>
+    <string name="basicImfo">BASIC IMFORMATION</string>
 
     <string name="profileImgDisc">ProfileImage</string>
     <string name="firstreg">OR Register for the first time</string>

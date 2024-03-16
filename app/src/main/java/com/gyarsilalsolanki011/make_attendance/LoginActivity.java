@@ -18,7 +18,7 @@ import com.gyarsilalsolanki011.make_attendance.R;
 public class LoginActivity extends AppCompatActivity {
 
     TextView txtInput;
-    Boolean whoLogin;
+    Integer whoLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,38 +40,60 @@ public class LoginActivity extends AppCompatActivity {
         passWord = findViewById(R.id.password_input);
         loginBtn = findViewById(R.id.login_btn);
         registerBtn = findViewById(R.id.register_btn);
+        whoLogin = getIntent().getIntExtra("whoLogin",1);
+
+        if (whoLogin==1){
+            txtInput.setText(R.string.login1);
+        }
+        else {
+            txtInput.setText(R.string.login2);
+        }
 
 
+        //for login Activity
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (whoLogin) {
+                if (whoLogin==1) {
 
-                    Intent iStudentMain = new Intent(LoginActivity.this, StudentViewActivity.class);
-
+                    Intent iStudentView = new Intent(LoginActivity.this, StudentViewActivity.class);
+                    startActivity(iStudentView);
 
                 }
 
                 else {
 
-                    Intent iStudentMain = new Intent(LoginActivity.this, FacultyViewActivity.class);
+                    Intent iFacultyView = new Intent(LoginActivity.this, FacultyViewActivity.class);
+                    startActivity(iFacultyView);
 
                 }
             }
         });
 
 
-    }
+        //for Registration Activity
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-    public void StudentLogin() {
-        txtInput.setText(R.string.login1);
-        whoLogin = Boolean.TRUE;
-    }
+                if (whoLogin==1) {
 
-    public void FacultyLogin() {
-        txtInput.setText(R.string.login2);
-        whoLogin = Boolean.FALSE;
+                    Intent iStudentReg = new Intent(LoginActivity.this, RegistrationActivity.class);
+                    iStudentReg.putExtra("whoReg",1);
+                    startActivity(iStudentReg);
+
+                }
+
+                else {
+
+                    Intent iFacultyReg = new Intent(LoginActivity.this, RegistrationActivity.class);
+                    iFacultyReg.putExtra("whoReg",2);
+                    startActivity(iFacultyReg);
+
+                }
+            }
+        });
     }
 
 }
