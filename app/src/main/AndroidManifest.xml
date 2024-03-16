@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MakeAttendance"
         tools:targetApi="31">
         <activity
+            android:name=".StudentViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -20,9 +23,6 @@
             android:exported="false" />
         <activity
             android:name=".FacultyActvity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginOptionActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Make-Attendance</string>
-    <string name="login1">Student login</string>
-    <string name="login2">faculty login</string>
+    <string name="login1">STUDENT LOGIN</string>
+    <string name="login2">FACULTY LOGIN</string>
     <string name="profile">View Profile</string>
     <string name="attendance">View Attendance</string>
     <string name="Username">Username</string>
