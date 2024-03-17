@@ -9,8 +9,12 @@
     <string name="login">login</string>
     <string name="register">Registration</string>
     <string name="btnTxt">Submit</string>
-    <string name="basicImfo">BASIC IMFORMATION</string>
+    <string name="basicInfo">BASIC INFORMATION</string>
+    <string name="takeAttends">TAKE  ATTENDANCE</string>
+
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
 
     <string name="profileImgDisc">ProfileImage</string>
-    <string name="firstreg">OR Register for the first time</string>
+    <string name="firstReg">OR Register for the first time</string>
 </resources>

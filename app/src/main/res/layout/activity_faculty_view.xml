@@ -1,48 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/login_option_background"
     tools:context=".FacultyViewActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="20dp"
-            android:background="@color/purple_500"
-            android:contentDescription="@string/profileImgDisc">
-        </ImageView>
-
-        <EditText
-            android:layout_width="match_parent"
+        <TextView
             android:layout_height="wrap_content"
-            android:hint="@string/Username"
-            android:background="@color/white"
-            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:text="Faculty   :"
             android:padding="10dp"
-            android:inputType="text">
-        </EditText>
+            android:theme="@style/myTheme1" />
 
-        <EditText
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
-            android:background="@color/white"
-            android:layout_margin="20dp"
+            android:id="@+id/faculty_name"
             android:padding="10dp"
-            android:inputType="text">
-        </EditText>
+            android:text="Ramesh "
+            android:theme="@style/myTheme1"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Subject   :"
+            android:padding="10dp"
+            android:theme="@style/myTheme1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject_name"
+            android:padding="10dp"
+            android:text="Maths"
+            android:theme="@style/myTheme1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:text="@string/takeAttends"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_background"
+        android:gravity="center"
+        android:layout_margin="10dp"
+
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerAttendance"/>
+
+    </LinearLayout>
+
+</LinearLayout>

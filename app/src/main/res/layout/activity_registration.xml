@@ -33,7 +33,7 @@
                 android:textSize="22sp"
                 android:padding="10dp"
                 android:layout_margin="30dp"
-                android:text="@string/basicImfo"
+                android:text="@string/basicInfo"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
 

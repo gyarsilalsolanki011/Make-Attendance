@@ -7,8 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.gyarsilalsolanki011.make_attendance.adapter.AttendanceModal;
+import com.gyarsilalsolanki011.make_attendance.adapter.RecyclerAttendaceAdapter;
+
+import java.util.ArrayList;
 
 public class FacultyViewActivity extends AppCompatActivity {
+    ArrayList<AttendanceModal> arrAttends = new ArrayList<>();
+    RecyclerAttendaceAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +29,22 @@ public class FacultyViewActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerAttendance);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //pre data
+        arrAttends.add(new AttendanceModal("Shyam", 1,1));
+        arrAttends.add(new AttendanceModal("Ram Kumar", 1,1));
+        arrAttends.add(new AttendanceModal("Tiger", 1,1));
+        arrAttends.add(new AttendanceModal("Karan", 1,1));
+        arrAttends.add(new AttendanceModal("Shyam", 1,1));
+        arrAttends.add(new AttendanceModal("Ram Kumar", 1,1));
+        arrAttends.add(new AttendanceModal("Tiger", 1,1));
+        arrAttends.add(new AttendanceModal("Karan", 1,1));
+
+        adapter = new RecyclerAttendaceAdapter(this,arrAttends);
+        recyclerView.setAdapter(adapter);
     }
 }

@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button studentLoginBtn, facultyLoginBtn;
-        //LoginActivity obj = new LoginActivity();
 
         studentLoginBtn = findViewById(R.id.student_login_btn);
         facultyLoginBtn = findViewById(R.id.faculty_login_btn);
@@ -35,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //obj.StudentLogin();
-                Intent iStudentLogin = new Intent(MainActivity.this, LoginActivity.class);
+                Intent iStudentLogin = new Intent(MainActivity.this,LoginActivity.class);
                 iStudentLogin.putExtra("whoLogin",1);
                 startActivity(iStudentLogin);
 
@@ -44,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         facultyLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //obj.FacultyLogin();
                 Intent iFacultyLogin = new Intent(MainActivity.this, LoginActivity.class);
                 iFacultyLogin.putExtra("whoLogin",2);
                 startActivity(iFacultyLogin);
