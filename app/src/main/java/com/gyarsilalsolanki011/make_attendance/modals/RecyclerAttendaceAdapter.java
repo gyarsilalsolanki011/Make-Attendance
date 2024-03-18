@@ -1,4 +1,4 @@
-package com.gyarsilalsolanki011.make_attendance.adapter;
+package com.gyarsilalsolanki011.make_attendance.modals;
 
 import android.content.Context;
 import android.view.LayoutInflater;

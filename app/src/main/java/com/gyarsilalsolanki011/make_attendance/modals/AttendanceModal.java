@@ -1,6 +1,4 @@
-package com.gyarsilalsolanki011.make_attendance.adapter;
-
-import android.widget.Button;
+package com.gyarsilalsolanki011.make_attendance.modals;
 
 public class AttendanceModal {
     String name;

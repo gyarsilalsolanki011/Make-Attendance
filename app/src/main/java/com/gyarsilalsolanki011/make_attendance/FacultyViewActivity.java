@@ -10,12 +10,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.gyarsilalsolanki011.make_attendance.adapter.AttendanceModal;
-import com.gyarsilalsolanki011.make_attendance.adapter.RecyclerAttendaceAdapter;
+import com.gyarsilalsolanki011.make_attendance.modals.AttendanceModal;
+import com.gyarsilalsolanki011.make_attendance.modals.RecyclerAttendaceAdapter;
 
 import java.util.ArrayList;
 
-public class FacultyViewActivity extends AppCompatActivity {
+public class FacultyViewActivity extends AppCompatActivity{
     ArrayList<AttendanceModal> arrAttends = new ArrayList<>();
     RecyclerAttendaceAdapter adapter;
 

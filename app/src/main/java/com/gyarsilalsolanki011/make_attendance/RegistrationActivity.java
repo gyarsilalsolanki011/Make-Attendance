@@ -13,10 +13,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.gyarsilalsolanki011.make_attendance.database.DatabaseManager;
+
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class RegistrationActivity extends AppCompatActivity {
 
+    DatabaseManager databaseManager;
+    ArrayList<String> arrDataList = new ArrayList<>();
     Integer whoReg;
     EditText editText1, editText2, editText3, editText4, editText5;
     Button regBtn;
@@ -38,6 +44,12 @@ public class RegistrationActivity extends AppCompatActivity {
         editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
+
+        arrDataList.add(editText1.getText().toString());
+        arrDataList.add(editText2.getText().toString());
+        arrDataList.add(editText3.getText().toString());
+        arrDataList.add(editText4.getText().toString());
+        arrDataList.add(editText5.getText().toString());
 
         regBtn = findViewById(R.id.regBtn);
         TextView stuFacTxt = findViewById(R.id.stu_fac_txt);
@@ -64,6 +76,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 else {
 
+                    
                     Intent iFacultyView = new Intent(RegistrationActivity.this, FacultyViewActivity.class);
                     startActivity(iFacultyView);
 
