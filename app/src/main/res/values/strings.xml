@@ -12,8 +12,8 @@
     <string name="basicInfo">BASIC INFORMATION</string>
     <string name="takeAttends">TAKE  ATTENDANCE</string>
 
-    <string name="present">Present</string>
-    <string name="absent">Absent</string>
+    <string name="present">P</string>
+    <string name="absent">A</string>
 
     <string name="profileImgDisc">ProfileImage</string>
     <string name="firstReg">OR Register for the first time</string>

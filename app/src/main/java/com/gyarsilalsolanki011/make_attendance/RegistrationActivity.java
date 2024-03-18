@@ -20,8 +20,6 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class RegistrationActivity extends AppCompatActivity {
-
-    DatabaseManager databaseManager;
     ArrayList<String> arrDataList = new ArrayList<>();
     Integer whoReg;
     EditText editText1, editText2, editText3, editText4, editText5;
@@ -54,6 +52,9 @@ public class RegistrationActivity extends AppCompatActivity {
         regBtn = findViewById(R.id.regBtn);
         TextView stuFacTxt = findViewById(R.id.stu_fac_txt);
         whoReg = getIntent().getIntExtra("whoReg",1);
+
+        DatabaseManager databaseManager = new DatabaseManager();
+        databaseManager.addData(arrDataList, whoReg);
 
         if (whoReg==1) {
             stuFacTxt.setText("Roll No. :");

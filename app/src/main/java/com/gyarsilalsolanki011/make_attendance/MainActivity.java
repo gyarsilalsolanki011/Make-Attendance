@@ -12,6 +12,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.gyarsilalsolanki011.make_attendance.modals.DataModal;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -52,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(iFacultyLogin);
             }
         });
+
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
+        myRef.setValue("Hello, World!");
 
     }
 }

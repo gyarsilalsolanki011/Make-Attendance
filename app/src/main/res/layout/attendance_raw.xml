@@ -17,31 +17,41 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="2dp"
+            android:gravity=""
             android:id="@+id/llRow1">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/student_name"
-                android:text="Ramesh : "
+                android:layout_marginTop="8dp"
+                android:text="shyam kumar : "
                 android:layout_marginStart="10dp"
                 android:theme="@style/myThemeBold"/>
 
-            <Button
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:text="@string/present"
-                android:id="@+id/presentBtn"
-                />
+                android:orientation="horizontal"
+                android:gravity="end">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="@string/absent"
-                android:id="@+id/absenttBtn"
-                />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/present"
+                    android:id="@+id/presentBtn"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/absent"
+                    android:id="@+id/absenttBtn"
+                    />
+
+            </LinearLayout>
 
 
         </LinearLayout>
