@@ -50,47 +50,41 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //for login Activity
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        loginBtn.setOnClickListener(v -> {
 
-                if (whoLogin==1) {
+            if (whoLogin==1) {
 
-                    Intent iStudentView = new Intent(LoginActivity.this, StudentViewActivity.class);
-                    startActivity(iStudentView);
+                Intent iStudentView = new Intent(LoginActivity.this, StudentViewActivity.class);
+                startActivity(iStudentView);
 
-                }
+            }
 
-                else {
+            else {
 
-                    Intent iFacultyView = new Intent(LoginActivity.this, FacultyViewActivity.class);
-                    startActivity(iFacultyView);
+                Intent iFacultyView = new Intent(LoginActivity.this, FacultyViewActivity.class);
+                startActivity(iFacultyView);
 
-                }
             }
         });
 
 
         //for Registration Activity
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        registerBtn.setOnClickListener(v -> {
 
-                if (whoLogin==1) {
+            if (whoLogin==1) {
 
-                    Intent iStudentReg = new Intent(LoginActivity.this, RegistrationActivity.class);
-                    iStudentReg.putExtra("whoReg",1);
-                    startActivity(iStudentReg);
+                Intent iStudentReg = new Intent(LoginActivity.this, RegistrationActivity.class);
+                iStudentReg.putExtra("whoReg",1);
+                startActivity(iStudentReg);
 
-                }
+            }
 
-                else {
+            else {
 
-                    Intent iFacultyReg = new Intent(LoginActivity.this, RegistrationActivity.class);
-                    iFacultyReg.putExtra("whoReg",2);
-                    startActivity(iFacultyReg);
+                Intent iFacultyReg = new Intent(LoginActivity.this, RegistrationActivity.class);
+                iFacultyReg.putExtra("whoReg",2);
+                startActivity(iFacultyReg);
 
-                }
             }
         });
     }

@@ -1,12 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/login_background"
     tools:context=".StudentViewActivity">
 
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_background">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/profileImgDisc"
+                    app:srcCompat="@drawable/icon_account_circle" />
+
+                <TextView
+                    android:id="@+id/name_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loin"
+                    android:layout_marginTop="16dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/rollNo_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enroll"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/name_set"
+                    app:layout_constraintStart_toStartOf="@+id/name_set"
+                    app:layout_constraintTop_toBottomOf="@+id/name_set" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rollNo_set">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableStart="@drawable/ic_3"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="@string/basicInfo"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        android:textAlignment="viewStart"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/branch"
+                            android:padding="11dp"
+                            android:theme="@style/myTheme1" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/branch_set"
+                            android:padding="11dp"
+                            android:theme="@style/myTheme1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:text="@string/semester"
+                            android:padding="11dp"
+                            android:theme="@style/myTheme1" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/semester_set"
+                            android:padding="11dp"
+                            android:theme="@style/myTheme1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:text="@string/email"
+                            android:padding="11dp"
+                            android:theme="@style/myTheme1" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/email_set"
+                            android:padding="11dp"
+                            android:theme="@style/myTheme1" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_attendance_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        style="@android:style/Widget.Button"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/ic_2"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="@string/attendance"
+                        android:textAlignment="viewStart"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_notification_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        style="@android:style/Widget.Button"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/ic_4"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="@string/notification"
+                        android:textAlignment="viewStart"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

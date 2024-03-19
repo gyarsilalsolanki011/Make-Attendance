@@ -56,7 +56,7 @@ public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAtten
 
             txtName = itemView.findViewById(R.id.student_name);
             presentBtn = itemView.findViewById(R.id.presentBtn);
-            absentBtn = itemView.findViewById(R.id.absenttBtn);
+            absentBtn = itemView.findViewById(R.id.absentBtn);
 
         }
     }

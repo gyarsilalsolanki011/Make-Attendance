@@ -2,8 +2,7 @@
     <string name="app_name">Make-Attendance</string>
     <string name="login1">STUDENT LOGIN</string>
     <string name="login2">FACULTY LOGIN</string>
-    <string name="profile">View Profile</string>
-    <string name="attendance">View Attendance</string>
+    <string name="attendance">VIEW ATTENDANCE</string>
     <string name="Username">Username</string>
     <string name="password">Password</string>
     <string name="login">login</string>
@@ -11,9 +10,24 @@
     <string name="btnTxt">Submit</string>
     <string name="basicInfo">BASIC INFORMATION</string>
     <string name="takeAttends">TAKE  ATTENDANCE</string>
+    <string name="profileIcon">Profile Icon</string>
+    <string name="notification">VIEW NOTIFICATION</string>
+    <string name="toastMsg">Notification Integrated Soon..</string>
 
     <string name="present">P</string>
     <string name="absent">A</string>
+
+    <string name="faculty">Faculty   :</string>
+    <string name="name_exp">Ramesh </string>
+    <string name="subject">Subject   :</string>
+    <string name="java">JavaScript</string>
+
+    <string name="name">Name :</string>
+    <string name="branch">Branch :</string>
+    <string name="semester">Semester :</string>
+    <string name="email">Email :</string>
+    <string name="loin">Lion Fischer</string>
+    <string name="enroll">0201CS211039</string>
 
     <string name="profileImgDisc">ProfileImage</string>
     <string name="firstReg">OR Register for the first time</string>

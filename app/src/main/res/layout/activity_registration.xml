@@ -17,7 +17,7 @@
         app:cardCornerRadius="5dp"
         app:cardUseCompatPadding="true"
         android:textAlignment="center"
-        android:id="@+id/scrolCard"
+        android:id="@+id/scrollCard"
         >
 
         <LinearLayout
@@ -38,9 +38,8 @@
                 android:textStyle="bold"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_margin="20dp"
                 android:background="@drawable/rounded_corner"
                 android:orientation="horizontal">
@@ -48,7 +47,7 @@
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Name :"
+                    android:text="@string/name"
                     android:padding="11dp"
                     android:theme="@style/myTheme1" />
 
@@ -56,15 +55,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:ems="10"
-                    android:hint="Ramesh"
                     android:id="@+id/editText1"
                     android:theme="@style/myTheme2"
-                    />
+                    android:autofillHints=""
+                    tools:ignore="LabelFor" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="20dp"
@@ -85,7 +83,8 @@
                     android:ems="10"
                     android:id="@+id/editText2"
                     android:theme="@style/myTheme2"
-                    />
+                    android:autofillHints=""
+                    tools:ignore="LabelFor" />
             </LinearLayout>
 
             <LinearLayout
@@ -99,7 +98,8 @@
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text=" Brance :"
+                    android:text="@string/branch"
+                    android:layout_marginStart="5dp"
                     android:padding="11dp"
                     android:theme="@style/myTheme1" />
 
@@ -107,11 +107,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:hint="cse"
                     android:ems="10"
                     android:id="@+id/editText3"
                     android:theme="@style/myTheme2"
-                    />
+                    android:autofillHints=""
+                    tools:ignore="LabelFor" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,7 +125,7 @@
                 <TextView
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:text="Senester :"
+                    android:text="@string/semester"
                     android:padding="11dp"
                     android:theme="@style/myTheme1" />
 
@@ -133,15 +133,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:hint="Fourth"
                     android:ems="10"
                     android:id="@+id/editText4"
                     android:theme="@style/myTheme2"
-                    />
+                    android:autofillHints=""
+                    tools:ignore="LabelFor" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="20dp"
@@ -151,7 +151,7 @@
                 <TextView
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:text="Email :"
+                    android:text="@string/email"
                     android:padding="11dp"
                     android:theme="@style/myTheme1" />
 
@@ -159,11 +159,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="Example@gmail.com"
                     android:ems="10"
                     android:id="@+id/editText5"
                     android:theme="@style/myTheme2"
-                    />
+                    android:autofillHints=""
+                    tools:ignore="LabelFor" />
             </LinearLayout>
 
             <Button

@@ -2,7 +2,6 @@ package com.gyarsilalsolanki011.make_attendance;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,8 +13,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.gyarsilalsolanki011.make_attendance.database.DatabaseManager;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -64,24 +61,21 @@ public class RegistrationActivity extends AppCompatActivity {
             stuFacTxt.setText("Subject :");
         }
 
-        regBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        regBtn.setOnClickListener(v -> {
 
-                if (whoReg==1) {
+            if (whoReg==1) {
 
-                    Intent iStudentView = new Intent(RegistrationActivity.this, StudentViewActivity.class);
-                    startActivity(iStudentView);
+                Intent iStudentView = new Intent(RegistrationActivity.this, StudentViewActivity.class);
+                startActivity(iStudentView);
 
-                }
+            }
 
-                else {
+            else {
 
-                    
-                    Intent iFacultyView = new Intent(RegistrationActivity.this, FacultyViewActivity.class);
-                    startActivity(iFacultyView);
 
-                }
+                Intent iFacultyView = new Intent(RegistrationActivity.this, FacultyViewActivity.class);
+                startActivity(iFacultyView);
+
             }
         });
 

@@ -2,8 +2,6 @@ package com.gyarsilalsolanki011.make_attendance;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -14,7 +12,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.gyarsilalsolanki011.make_attendance.modals.DataModal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,27 +31,21 @@ public class MainActivity extends AppCompatActivity {
         studentLoginBtn = findViewById(R.id.student_login_btn);
         facultyLoginBtn = findViewById(R.id.faculty_login_btn);
 
-        studentLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        studentLoginBtn.setOnClickListener(v -> {
 
-                Intent iStudentLogin = new Intent(MainActivity.this,LoginActivity.class);
-                iStudentLogin.putExtra("whoLogin",1);
-                startActivity(iStudentLogin);
+            Intent iStudentLogin = new Intent(MainActivity.this,LoginActivity.class);
+            iStudentLogin.putExtra("whoLogin",1);
+            startActivity(iStudentLogin);
 
-            }
         });
 
 
 
-        facultyLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        facultyLoginBtn.setOnClickListener(v -> {
 
-                Intent iFacultyLogin = new Intent(MainActivity.this, LoginActivity.class);
-                iFacultyLogin.putExtra("whoLogin",2);
-                startActivity(iFacultyLogin);
-            }
+            Intent iFacultyLogin = new Intent(MainActivity.this, LoginActivity.class);
+            iFacultyLogin.putExtra("whoLogin",2);
+            startActivity(iFacultyLogin);
         });
 
         // Write a message to the database
