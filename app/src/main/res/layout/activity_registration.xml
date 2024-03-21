@@ -52,8 +52,8 @@
                     android:theme="@style/myTheme1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:inputType="text"
                     android:id="@+id/editText1"
                     android:theme="@style/myTheme2"
@@ -77,8 +77,8 @@
                     android:theme="@style/myTheme1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:inputType="text"
                     android:ems="10"
                     android:id="@+id/editText2"
@@ -88,12 +88,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="20dp"
                 android:background="@drawable/rounded_corner"
-                android:gravity="center">
+                >
 
                 <TextView
                     android:layout_height="wrap_content"
@@ -104,10 +104,9 @@
                     android:theme="@style/myTheme1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:inputType="text"
-                    android:ems="10"
                     android:id="@+id/editText3"
                     android:theme="@style/myTheme2"
                     android:autofillHints=""
@@ -115,25 +114,24 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="20dp"
                 android:background="@drawable/rounded_corner"
-                android:gravity="center">
+                >
 
                 <TextView
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:text="@string/semester"
                     android:padding="11dp"
                     android:theme="@style/myTheme1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:inputType="text"
-                    android:ems="10"
                     android:id="@+id/editText4"
                     android:theme="@style/myTheme2"
                     android:autofillHints=""
@@ -146,20 +144,19 @@
                 android:orientation="horizontal"
                 android:layout_margin="20dp"
                 android:background="@drawable/rounded_corner"
-                android:gravity="center">
+                >
 
                 <TextView
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:text="@string/email"
                     android:padding="11dp"
                     android:theme="@style/myTheme1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:inputType="textEmailAddress"
-                    android:ems="10"
                     android:id="@+id/editText5"
                     android:theme="@style/myTheme2"
                     android:autofillHints=""
@@ -172,7 +169,6 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="20dp"
-                android:textSize="20sp"
                 android:text="@string/btnTxt"
                 android:id="@+id/regBtn"
                 android:background="@drawable/rounded_corner"
