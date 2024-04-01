@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "569321133791",
-    "project_id": "make-attendance",
-    "storage_bucket": "make-attendance.appspot.com"
+    "project_number": "25285184658",
+    "project_id": "make-attendance-f4712",
+    "storage_bucket": "make-attendance-f4712.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:569321133791:android:ef438b8e72c555c2aa3b6a",
+        "mobilesdk_app_id": "1:25285184658:android:8dad579c03bfc23b25aa4b",
         "android_client_info": {
           "package_name": "com.gyarsilalsolanki011.make_attendance"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDE3la8Ogv48g526CrdALIAzVYjminUCUw"
+          "current_key": "AIzaSyC8DpGjqMN0qdWFWPg-kPvh2NXUxh-g5wE"
         }
       ],
       "services": {

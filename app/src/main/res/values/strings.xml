@@ -14,6 +14,9 @@
     <string name="notification">VIEW NOTIFICATION</string>
     <string name="toastMsg">Notification Integrated Soon..</string>
 
+    <string name="add">Add_attendance</string>
+    <string name="not_add">Not attendance</string>
+
     <string name="present">P</string>
     <string name="absent">A</string>
 

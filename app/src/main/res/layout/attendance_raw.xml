@@ -39,19 +39,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/present_btn"
                     android:text="@string/present"
                     android:id="@+id/presentBtn"
-                    />
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/absent_btn"
                     android:text="@string/absent"
                     android:id="@+id/absentBtn"
-                    />
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </LinearLayout>
 
