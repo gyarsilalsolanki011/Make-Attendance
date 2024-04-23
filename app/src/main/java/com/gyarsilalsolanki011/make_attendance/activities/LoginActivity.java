@@ -1,6 +1,7 @@
 package com.gyarsilalsolanki011.make_attendance.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -14,6 +15,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.gyarsilalsolanki011.make_attendance.R;
 import com.gyarsilalsolanki011.make_attendance.auth.FirebaseAuthRepository;
+import com.gyarsilalsolanki011.make_attendance.database.FirebaseUserRepository;
 import com.gyarsilalsolanki011.make_attendance.databinding.ActivityLoginBinding;
 
 import java.util.Objects;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private Boolean whoLogin;
     private ActivityLoginBinding binding;
     private final FirebaseAuthRepository auth = new FirebaseAuthRepository();
+    private final FirebaseUserRepository userRepository = new FirebaseUserRepository();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,12 +57,14 @@ public class LoginActivity extends AppCompatActivity {
             Intent iStudentReg = new Intent(LoginActivity.this, RegistrationActivity.class);
             iStudentReg.putExtra("whoReg",true);
             startActivity(iStudentReg);
+            finish();
         }
 
         else {
             Intent iFacultyReg = new Intent(LoginActivity.this, RegistrationActivity.class);
             iFacultyReg.putExtra("whoReg",false);
             startActivity(iFacultyReg);
+            finish();
         }
     }
 
@@ -76,11 +81,9 @@ public class LoginActivity extends AppCompatActivity {
             binding.loginBtn.setVisibility(View.GONE);
 
             Task<AuthResult> task = auth.login(email, password);
-            task.addOnSuccessListener(authResult -> {
-                checkUser();
-                binding.progressIndicator.setVisibility(View.GONE);
-                binding.loginBtn.setVisibility(View.VISIBLE);
-            });
+            task.addOnSuccessListener(
+                    authResult -> checkUser()
+            );
             task.addOnFailureListener(error -> {
                 binding.progressIndicator.setVisibility(View.GONE);
                 binding.loginBtn.setVisibility(View.VISIBLE);
@@ -92,19 +95,29 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkUser() {
-        if (auth.getCurrentUser() != null){
             if (whoLogin) {
-                Intent iStudentView = new Intent(LoginActivity.this, StudentViewActivity.class);
-                iStudentView.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(iStudentView);
+                userRepository.getStudentData().addOnSuccessListener(
+                        doc -> {
+                            SharedPreferences sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
+                            sharedPreferences.edit().putString("userType", (String) Objects.requireNonNull(doc.getData()).get("type")).apply();
+                            Intent iStudentView = new Intent(LoginActivity.this, StudentViewActivity.class);
+                            startActivity(iStudentView);
+                            finish();
+                        }
+                );
             }
 
             else {
-                Intent iFacultyView = new Intent(LoginActivity.this, FacultyViewActivity.class);
-                iFacultyView.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(iFacultyView);
+                userRepository.getFacultyData().addOnSuccessListener(
+                        doc -> {
+                            SharedPreferences sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
+                            sharedPreferences.edit().putString("userType", (String) Objects.requireNonNull(doc.getData()).get("type")).apply();
+                            Intent iFacultyView = new Intent(LoginActivity.this, FacultyViewActivity.class);
+                            startActivity(iFacultyView);
+                            finish();
+                        }
+                );
             }
-        }
     }
 
 }
