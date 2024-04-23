@@ -33,7 +33,6 @@ public class RegistrationActivity extends AppCompatActivity {
         arrDataList.add(Objects.requireNonNull(binding.editTextName.getText()).toString());
         arrDataList.add(Objects.requireNonNull(binding.editTextSubject.getText()).toString());
         arrDataList.add(Objects.requireNonNull(binding.editTextBranch.getText()).toString());
-        arrDataList.add(Objects.requireNonNull(binding.editTextSemester.getText()).toString());
 
         whoReg = getIntent().getBooleanExtra("whoReg",true);
 
