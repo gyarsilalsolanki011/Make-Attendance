@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/activity_background"
     android:padding="32dp"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <ImageView
         android:layout_width="160dp"
@@ -61,15 +61,26 @@
         android:background="@drawable/button__background"
         android:textColor="@color/teal_200"
         android:padding="10dp"
-        android:layout_margin="32dp"
+        android:layout_marginTop="24dp"
         android:textSize="20sp"
         android:id="@+id/login_btn"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/firstReg"
         android:textSize="15sp"
+        android:layout_marginTop="24dp"
         android:textColor="@color/white"
         android:textStyle="bold"
         />

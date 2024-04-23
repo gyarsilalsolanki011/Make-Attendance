@@ -1,8 +1,8 @@
-package com.gyarsilalsolanki011.make_attendance.modals;
+package com.gyarsilalsolanki011.make_attendance.activities.modal;
 
 public class AttendanceModal {
-    String name;
-    int present, absent;
+    public String name;
+    public int present, absent;
 
     public AttendanceModal(String name, int present, int absent) {
 

@@ -1,4 +1,4 @@
-package com.gyarsilalsolanki011.make_attendance;
+package com.gyarsilalsolanki011.make_attendance.activities;
 
 import android.os.Bundle;
 
@@ -10,8 +10,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.gyarsilalsolanki011.make_attendance.modals.AttendanceModal;
-import com.gyarsilalsolanki011.make_attendance.modals.RecyclerAttendaceAdapter;
+import com.gyarsilalsolanki011.make_attendance.R;
+import com.gyarsilalsolanki011.make_attendance.activities.modal.AttendanceModal;
+import com.gyarsilalsolanki011.make_attendance.activities.adapter.RecyclerAttendaceAdapter;
 
 import java.util.ArrayList;
 

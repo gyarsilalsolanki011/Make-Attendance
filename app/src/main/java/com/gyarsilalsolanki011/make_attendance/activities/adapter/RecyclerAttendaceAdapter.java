@@ -1,4 +1,4 @@
-package com.gyarsilalsolanki011.make_attendance.modals;
+package com.gyarsilalsolanki011.make_attendance.activities.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.gyarsilalsolanki011.make_attendance.R;
+import com.gyarsilalsolanki011.make_attendance.activities.modal.AttendanceModal;
 
 import java.util.ArrayList;
 
