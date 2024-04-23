@@ -36,14 +36,14 @@ public class FacultyViewActivity extends AppCompatActivity{
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //pre data
-        arrAttends.add(new AttendanceModal("Shyam", 1,1));
-        arrAttends.add(new AttendanceModal("Ram Kumar", 1,1));
-        arrAttends.add(new AttendanceModal("Tiger", 1,1));
-        arrAttends.add(new AttendanceModal("Karan", 1,1));
-        arrAttends.add(new AttendanceModal("Shyam", 1,1));
-        arrAttends.add(new AttendanceModal("Ram Kumar", 1,1));
-        arrAttends.add(new AttendanceModal("Tiger", 1,1));
-        arrAttends.add(new AttendanceModal("Karan", 1,1));
+        arrAttends.add(new AttendanceModal("Shyam", 1,1, 98));
+        arrAttends.add(new AttendanceModal("Ram Kumar", 1,1, 75));
+        arrAttends.add(new AttendanceModal("Tiger", 1,1, 100));
+        arrAttends.add(new AttendanceModal("Karan", 1,1, 20));
+        arrAttends.add(new AttendanceModal("Shyam", 1,1, 50));
+        arrAttends.add(new AttendanceModal("Ram Kumar", 1,1, 55));
+        arrAttends.add(new AttendanceModal("Tiger", 1,1, 28));
+        arrAttends.add(new AttendanceModal("Karan", 1,1, 80));
 
         adapter = new RecyclerAttendaceAdapter(this,arrAttends);
         recyclerView.setAdapter(adapter);

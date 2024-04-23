@@ -5,6 +5,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.gyarsilalsolanki011.make_attendance.database.modal.User;
 
 public interface UserRepository {
-    Task<DocumentSnapshot> getUserData();
-    void setUserData(User user);
+    Task<DocumentSnapshot> getStudentData();
+    void setStudentData(User user);
+    Task<DocumentSnapshot> getFacultyData();
+    void setFacultyData(User user);
 }
