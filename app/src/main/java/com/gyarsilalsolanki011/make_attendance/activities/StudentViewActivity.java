@@ -1,53 +1,43 @@
 package com.gyarsilalsolanki011.make_attendance.activities;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.gyarsilalsolanki011.make_attendance.R;
+import com.gyarsilalsolanki011.make_attendance.auth.FirebaseAuthRepository;
+import com.gyarsilalsolanki011.make_attendance.databinding.ActivityStudentViewBinding;
 
 public class StudentViewActivity extends AppCompatActivity {
-
-    ImageView imageView;
-    TextView name_set, rollNo_set, branch_set, sem_Set, email_set;
-    AppCompatButton btn_attends_view, btn_notify_view;
-    @SuppressLint("MissingInflatedId")
+    private ActivityStudentViewBinding binding;
+    private final FirebaseAuthRepository  auth = new FirebaseAuthRepository();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_view);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-        imageView = findViewById(R.id.imageView);
-        name_set = findViewById(R.id.name_set);
-        rollNo_set = findViewById(R.id.rollNo_set);
-        branch_set = findViewById(R.id.branch_set);
-        sem_Set = findViewById(R.id.semester_set);
-        email_set = findViewById(R.id.email_set);
-
-        btn_attends_view = findViewById(R.id.btn_attendance_view);
-        btn_notify_view = findViewById(R.id.btn_notification_view);
-
-        btn_attends_view.setOnClickListener(v -> {
-
-        });
+        binding = ActivityStudentViewBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
 
-        btn_notify_view.setOnClickListener(v -> Toast.makeText(StudentViewActivity.this, "Notification Integrated Soon..", Toast.LENGTH_SHORT).show());
+        binding.btnAttendanceView.setOnClickListener(
+                v -> {}
+        );
+
+
+        binding.btnNotificationView.setOnClickListener(
+                v -> Toast.makeText(StudentViewActivity.this, "Notification Integrated Soon..", Toast.LENGTH_SHORT).show()
+        );
+
+        binding.logoutButton.setOnClickListener(
+                v -> {
+                    auth.logout();
+                    Intent intent = new Intent(StudentViewActivity.this, LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+        );
 
 
     }

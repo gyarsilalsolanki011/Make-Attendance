@@ -75,19 +75,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextSemester"
-            android:layout_width="match_parent"
-            android:hint="@string/semester"
-            android:inputType="number"
-            android:textColor="@color/white"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="24dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:hint="@string/password"
@@ -117,5 +104,14 @@
         android:layout_gravity="center"
         android:id="@+id/buttonRegister"
         android:background="@drawable/button__background"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progressIndicator"/>
 
 </LinearLayout>
