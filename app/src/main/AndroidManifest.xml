@@ -15,19 +15,19 @@
         android:theme="@style/Theme.MakeAttendance"
         tools:targetApi="31">
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".activities.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".StudentViewActivity"
+            android:name=".activities.StudentViewActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".FacultyViewActivity"
+            android:name=".activities.FacultyViewActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

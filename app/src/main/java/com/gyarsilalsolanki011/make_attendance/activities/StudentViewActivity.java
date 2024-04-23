@@ -1,4 +1,4 @@
-package com.gyarsilalsolanki011.make_attendance;
+package com.gyarsilalsolanki011.make_attendance.activities;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.gyarsilalsolanki011.make_attendance.R;
 
 public class StudentViewActivity extends AppCompatActivity {
 

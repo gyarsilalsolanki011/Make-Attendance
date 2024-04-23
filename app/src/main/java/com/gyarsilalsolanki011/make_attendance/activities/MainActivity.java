@@ -1,4 +1,4 @@
-package com.gyarsilalsolanki011.make_attendance;
+package com.gyarsilalsolanki011.make_attendance.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

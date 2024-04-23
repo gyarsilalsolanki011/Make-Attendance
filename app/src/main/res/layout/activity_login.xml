@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/activity_background"
     android:padding="32dp"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <ImageView
         android:layout_width="160dp"
