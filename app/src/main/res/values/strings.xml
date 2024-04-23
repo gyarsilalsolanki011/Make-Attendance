@@ -6,32 +6,32 @@
     <string name="Username">Username</string>
     <string name="password">Password</string>
     <string name="login">login</string>
-    <string name="register">Registration</string>
-    <string name="btnTxt">Submit</string>
-    <string name="basicInfo">BASIC INFORMATION</string>
+    <string name="register">Register</string>
+    <string name="CreateAccount">Create Account</string>
+    <string name="basicInfo">Basic Information</string>
     <string name="takeAttends">TAKE  ATTENDANCE</string>
     <string name="profileIcon">Profile Icon</string>
     <string name="notification">VIEW NOTIFICATION</string>
     <string name="toastMsg">Notification Integrated Soon..</string>
-
-    <string name="add">Add_attendance</string>
-    <string name="not_add">Not attendance</string>
-
-    <string name="present">P</string>
-    <string name="absent">A</string>
 
     <string name="faculty">Faculty   :</string>
     <string name="name_exp">Ramesh </string>
     <string name="subject">Subject   :</string>
     <string name="java">JavaScript</string>
 
-    <string name="name">Name :</string>
-    <string name="branch">Branch :</string>
-    <string name="semester">Semester :</string>
-    <string name="email">Email :</string>
+    <string name="name">Name</string>
+    <string name="branch">Branch</string>
+    <string name="semester">Semester</string>
+    <string name="email">Email</string>
     <string name="loin">Lion Fischer</string>
     <string name="enroll">0201CS211039</string>
 
     <string name="profileImgDisc">ProfileImage</string>
-    <string name="firstReg">OR Register for the first time</string>
+    <string name="firstReg">Don\'t have an Account? click Register</string>
+    <string name="passwordConfirm">ConfirmPassword</string>
+    <string name="title">TitleName</string>
+    <string name="percentage">percentage</string>
+    <string name="press_if_not_attended">press_if_not_attended</string>
+    <string name="press_if_attended">press_if_attended</string>
+    <string name="logout">Log Out</string>
 </resources>

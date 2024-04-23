@@ -2,59 +2,81 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/item_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="7dp"
-        app:cardUseCompatPadding="true">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        app:cardBackgroundColor="@color/shadow_black"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/purple_200"
-            android:padding="2dp"
-            android:id="@+id/llRow1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/student_name"
-                android:layout_marginTop="8dp"
-                android:text="@string/name_exp"
-                android:layout_marginStart="10dp"
-                android:theme="@style/myThemeBold"/>
+            android:padding="16dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end">
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
 
-                <Button
+                <TextView
+                    android:id="@+id/student_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="@string/present"
-                    android:id="@+id/presentBtn"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:maxWidth="180dp"
+                    android:text="@string/title"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
-                <Button
+                <TextView
+                    android:id="@+id/percentage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="@string/absent"
-                    android:id="@+id/absentBtn"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:maxWidth="180dp"
+                    android:text="@string/percentage"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
-        </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:layout_toStartOf="@+id/button_mark"
+                android:backgroundTint="@color/red"
+                android:contentDescription="@string/press_if_not_attended"
+                android:src="@drawable/ic_clear"
+                app:backgroundTint="@color/black"
+                app:rippleColor="@color/white"
+                tools:ignore="RelativeOverlap" />
 
-    </androidx.cardview.widget.CardView>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/green"
+                android:contentDescription="@string/press_if_attended"
+                android:src="@drawable/ic_done"
+                app:backgroundTint="@color/black"
+                app:rippleColor="@color/white" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

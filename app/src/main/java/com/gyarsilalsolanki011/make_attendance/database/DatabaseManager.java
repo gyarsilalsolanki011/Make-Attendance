@@ -1,9 +1,6 @@
 package com.gyarsilalsolanki011.make_attendance.database;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.gyarsilalsolanki011.make_attendance.modals.DataModal;
-
 import java.util.ArrayList;
 
 public class DatabaseManager {
@@ -20,7 +17,7 @@ public class DatabaseManager {
         sem = arrDataList.get(3);
         email = arrDataList.get(4);
 
-        DatabaseReference studentRef = FirebaseDatabase.getInstance().getReference("Students");
+
 
         DataModal dataModal = new DataModal(name, sub_roll, branch, sem, email);
 
