@@ -13,10 +13,10 @@ import com.gyarsilalsolanki011.make_attendance.database.modal.User;
 public class FirebaseUserRepository implements UserRepository {
 
     private final FirebaseFirestore database = FirebaseFirestore.getInstance();
-    private final CollectionReference studentCollection = database.collection("students");
-    private final CollectionReference facultyCollection = database.collection("faculties");
+    private final CollectionReference studentCollection = database.collection("Students");
+    private final CollectionReference facultyCollection = database.collection("Faculties");
 
-    private final CollectionReference attendanceCollection = database.collection("mathematics");
+    private final CollectionReference attendanceCollection = database.collection("Mathematics");
     private final static String TAG = "FIREBASE USER REPOSITORY";
 
     @Override

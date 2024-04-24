@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class RegistrationActivity extends AppCompatActivity {
-    ArrayList<String> arrDataList = new ArrayList<>();
     private  ActivityRegistrationBinding binding;
     private Boolean whoReg;
     private final FirebaseAuthRepository auth = new FirebaseAuthRepository();
@@ -33,13 +32,20 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         whoReg = getIntent().getBooleanExtra("whoReg",true);
 
+        binding.thenLogin.setOnClickListener(
+                v -> {
+                    Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+        );
+
         if (whoReg) {
             binding.rollNo.setHint("Roll Number");
         }
         else {
             binding.rollNo.setHint("Subject");
         }
-        arrDataList.add(Objects.requireNonNull(binding.editTextEmail.getText()).toString().trim());
 
         binding.buttonRegister.setOnClickListener(
                 v -> CreateUser()
@@ -47,6 +53,7 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void CreateUser() {
+
         String email = Objects.requireNonNull(binding.editTextEmail.getText()).toString().trim();
         String fullName = Objects.requireNonNull(binding.editTextName.getText()).toString().trim();
         String branch = Objects.requireNonNull(binding.editTextBranch.getText()).toString().trim();

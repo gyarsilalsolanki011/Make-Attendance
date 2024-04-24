@@ -5,7 +5,7 @@
     <string name="attendance">VIEW ATTENDANCE</string>
     <string name="Username">Username</string>
     <string name="password">Password</string>
-    <string name="login">login</string>
+    <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="CreateAccount">Create Account</string>
     <string name="basicInfo">Basic Information</string>
@@ -25,9 +25,9 @@
     <string name="email">Email</string>
     <string name="loin">Lion Fischer</string>
     <string name="enroll">0201CS211039</string>
-
     <string name="profileImgDisc">ProfileImage</string>
-    <string name="firstReg">Don\'t have an Account? click Register</string>
+    <string name="firstReg">Don\'t have an Account? create one!</string>
+    <string name="thenLogin">Already have an Account? then Login</string>
     <string name="passwordConfirm">ConfirmPassword</string>
     <string name="title">TitleName</string>
     <string name="percentage">percentage</string>
