@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
             Intent iStudentLogin = new Intent(MainActivity.this,LoginActivity.class);
             iStudentLogin.putExtra("whoLogin",true);
             startActivity(iStudentLogin);
+            finish();
         });
 
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             Intent iFacultyLogin = new Intent(MainActivity.this, LoginActivity.class);
             iFacultyLogin.putExtra("whoLogin",false);
             startActivity(iFacultyLogin);
+            finish();
         });
 
     }

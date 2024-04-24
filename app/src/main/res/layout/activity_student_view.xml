@@ -34,7 +34,7 @@
                 app:srcCompat="@drawable/icon_account_circle" />
 
             <TextView
-                android:id="@+id/name_set"
+                android:id="@+id/fullNameSet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -48,15 +48,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
-                android:id="@+id/rollNo_set"
+                android:id="@+id/rollNoSet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/enroll"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/name_set"
-                app:layout_constraintStart_toStartOf="@+id/name_set"
-                app:layout_constraintTop_toBottomOf="@+id/name_set" />
+                app:layout_constraintEnd_toEndOf="@+id/fullNameSet"
+                app:layout_constraintStart_toStartOf="@+id/fullNameSet"
+                app:layout_constraintTop_toBottomOf="@+id/fullNameSet" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rollNo_set">
+                app:layout_constraintTop_toBottomOf="@+id/rollNoSet">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button"
@@ -102,7 +102,7 @@
                         android:theme="@style/myTheme1" />
 
                     <TextView
-                        android:id="@+id/email_set"
+                        android:id="@+id/emailSet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="11dp"
@@ -125,7 +125,7 @@
                         android:theme="@style/myTheme1" />
 
                     <TextView
-                        android:id="@+id/branch_set"
+                        android:id="@+id/branchSet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="11dp"
@@ -177,7 +177,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/button__background"
+            android:background="@drawable/button_background"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="24dp"

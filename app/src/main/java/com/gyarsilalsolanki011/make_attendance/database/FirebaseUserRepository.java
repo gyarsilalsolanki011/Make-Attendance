@@ -15,6 +15,8 @@ public class FirebaseUserRepository implements UserRepository {
     private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private final CollectionReference studentCollection = database.collection("students");
     private final CollectionReference facultyCollection = database.collection("faculties");
+
+    private final CollectionReference attendanceCollection = database.collection("mathematics");
     private final static String TAG = "FIREBASE USER REPOSITORY";
 
     @Override
@@ -46,6 +48,23 @@ public class FirebaseUserRepository implements UserRepository {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             Task<Void> task = facultyCollection.document(user.getUid()).set(userData.toMapFaculty());
+            task.addOnFailureListener(e -> Log.e(TAG, e.toString()));
+            task.addOnSuccessListener(e -> Log.d(TAG, "Data set success"));
+        }
+    }
+
+    @Override
+    public Task<DocumentSnapshot> getAttendanceData() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        assert user != null;
+        return attendanceCollection.document(user.getUid()).get();
+    }
+
+    @Override
+    public void setAttendanceData(User userData) {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            Task<Void> task = attendanceCollection.document(user.getUid()).set(userData.toMapAttendance());
             task.addOnFailureListener(e -> Log.e(TAG, e.toString()));
             task.addOnSuccessListener(e -> Log.d(TAG, "Data set success"));
         }
