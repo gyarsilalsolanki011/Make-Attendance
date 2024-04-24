@@ -34,4 +34,6 @@
     <string name="press_if_not_attended">press_if_not_attended</string>
     <string name="press_if_attended">press_if_attended</string>
     <string name="logout">Log Out</string>
+    <string name="present">Present :</string>
+    <string name="absent">Absent :</string>
 </resources>
