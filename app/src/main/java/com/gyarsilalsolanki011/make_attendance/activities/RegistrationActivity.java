@@ -72,17 +72,16 @@ public class RegistrationActivity extends AppCompatActivity {
                     task.addOnSuccessListener(
                             result -> {
                                 if (whoReg) {
-                                    user.setStudentData(User.student(email, fullName, branch, sub_or_roll));
-                                    user.setAttendanceData(User.Attendance(email, 0,0,0));                                    Intent iStudentView = new Intent(RegistrationActivity.this, LoginActivity.class);
+                                    user.setStudentData(User.student(email, fullName, sub_or_roll, branch));
+                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0));
+                                    Intent iStudentView = new Intent(RegistrationActivity.this, LoginActivity.class);
                                     startActivity(iStudentView);
-                                    finish();
                                 }
                                 else {
-                                    user.setFacultyData(User.faculty(email, fullName, branch, sub_or_roll));
+                                    user.setFacultyData(User.faculty(email, fullName, sub_or_roll, branch));
                                     Intent iFacultyView = new Intent(RegistrationActivity.this, LoginActivity.class);
                                     iFacultyView.putExtra("whoLogin",false);
                                     startActivity(iFacultyView);
-                                    finish();
                                 }
                             });
 

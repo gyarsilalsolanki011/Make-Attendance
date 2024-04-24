@@ -50,6 +50,7 @@ public class User {
         data.put("email", this.email);
         data.put("branch", this.branch);
         data.put("rollNumber", this.rollNumber);
+
         return data;
     }
 
@@ -59,7 +60,7 @@ public class User {
                 (String) Objects.requireNonNull(data.get("fullName")),
                 (String) Objects.requireNonNull(data.get("branch")),
                 (String) Objects.requireNonNull(data.get("rollNumber")),
-                UserType.valueOf((String) data.get("type"))
+                UserType.Student
         );
     }
 
@@ -78,16 +79,16 @@ public class User {
                 (String) Objects.requireNonNull(data.get("fullName")),
                 (String) Objects.requireNonNull(data.get("branch")),
                 (String) Objects.requireNonNull(data.get("subject")),
-                UserType.valueOf((String) data.get("type"))
+                UserType.Faculty
         );
     }
 
     public Map<String, Object> toMapAttendance() {
         Map<String, Object> data = new HashMap<>();
         data.put("fullName", this.fullName);
-        data.put("present", this.email);
-        data.put("absent", this.branch);
-        data.put("percentage", this.subject);
+        data.put("present", this.present);
+        data.put("absent", this.absent);
+        data.put("percentage", this.percentage);
         return data;
     }
 
