@@ -5,7 +5,7 @@
     <string name="attendance">VIEW ATTENDANCE</string>
     <string name="Username">Username</string>
     <string name="password">Password</string>
-    <string name="login">login</string>
+    <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="CreateAccount">Create Account</string>
     <string name="basicInfo">Basic Information</string>
@@ -13,25 +13,27 @@
     <string name="profileIcon">Profile Icon</string>
     <string name="notification">VIEW NOTIFICATION</string>
     <string name="toastMsg">Notification Integrated Soon..</string>
-
     <string name="faculty">Faculty   :</string>
     <string name="name_exp">Ramesh </string>
     <string name="subject">Subject   :</string>
     <string name="java">JavaScript</string>
-
     <string name="name">Name</string>
     <string name="branch">Branch</string>
     <string name="semester">Semester</string>
     <string name="email">Email</string>
     <string name="loin">Lion Fischer</string>
     <string name="enroll">0201CS211039</string>
-
     <string name="profileImgDisc">ProfileImage</string>
-    <string name="firstReg">Don\'t have an Account? click Register</string>
+    <string name="firstReg">Don\'t have an Account? create one!</string>
+    <string name="thenLogin">Already have an Account? then Login</string>
     <string name="passwordConfirm">ConfirmPassword</string>
     <string name="title">TitleName</string>
     <string name="percentage">percentage</string>
     <string name="press_if_not_attended">press_if_not_attended</string>
     <string name="press_if_attended">press_if_attended</string>
     <string name="logout">Log Out</string>
+    <string name="present">Present :</string>
+    <string name="absent">Absent :</string>
+    <string name="classes_attended">Classes Attended : </string>
+    <string name="classes_conducted">Classes Conducted : </string>
 </resources>

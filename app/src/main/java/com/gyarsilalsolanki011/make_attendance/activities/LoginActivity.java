@@ -35,19 +35,11 @@ public class LoginActivity extends AppCompatActivity {
 
         whoLogin = getIntent().getBooleanExtra("whoLogin",true);
 
-        if (whoLogin){
-            binding.txtInput.setText(R.string.login1);
-        }
-        else {
-            binding.txtInput.setText(R.string.login2);
-        }
-
-
         binding.loginBtn.setOnClickListener(
                 v -> Login()
         );
 
-        binding.registerBtn.setOnClickListener(
+        binding.createOne.setOnClickListener(
                 v -> Register()
         );
     }
@@ -65,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
             iFacultyReg.putExtra("whoReg",false);
             startActivity(iFacultyReg);
             finish();
+
         }
     }
 
@@ -99,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                 userRepository.getStudentData().addOnSuccessListener(
                         doc -> {
                             SharedPreferences sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
-                            sharedPreferences.edit().putString("userType", (String) Objects.requireNonNull(doc.getData()).get("type")).apply();
+                            sharedPreferences.edit().putString("userType", "Student").apply();
                             Intent iStudentView = new Intent(LoginActivity.this, StudentViewActivity.class);
                             startActivity(iStudentView);
                             finish();
@@ -111,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                 userRepository.getFacultyData().addOnSuccessListener(
                         doc -> {
                             SharedPreferences sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
-                            sharedPreferences.edit().putString("userType", (String) Objects.requireNonNull(doc.getData()).get("type")).apply();
+                            sharedPreferences.edit().putString("userType", "Faculty").apply();
                             Intent iFacultyView = new Intent(LoginActivity.this, FacultyViewActivity.class);
                             startActivity(iFacultyView);
                             finish();

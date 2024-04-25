@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/activity_background"
     tools:context=".activities.FacultyViewActivity">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logoutButton"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/btn_background_2"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <LinearLayout
+        android:id="@+id/linearLay1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:orientation="horizontal"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center">
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoutButton">
 
         <TextView
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/faculty"
-            android:padding="11dp"
-            android:theme="@style/myTheme1" />
+            android:theme="@style/myTheme2" />
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
             android:id="@+id/facultyName_set"
-            android:padding="11dp"
-            android:theme="@style/myTheme1" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:theme="@style/myTheme2" />
 
     </LinearLayout>
 
@@ -38,23 +53,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:gravity="center">
+        android:id="@+id/linearLay2"
+
+        app:layout_constraintEnd_toEndOf="@+id/linearLay1"
+        app:layout_constraintStart_toStartOf="@+id/linearLay1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLay1">
 
         <TextView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:text="@string/subject"
-            android:padding="11dp"
-            android:theme="@style/myTheme1" />
+            android:theme="@style/myTheme2"/>
 
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/subject_set"
-            android:padding="11dp"
-            android:theme="@style/myTheme1" />
+            android:layout_marginStart="10dp"
+            android:theme="@style/myTheme2" />
 
     </LinearLayout>
 
@@ -64,7 +81,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btn_background_1"
@@ -74,13 +91,22 @@
         android:text="@string/takeAttends"
         android:textSize="18sp"
         android:textStyle="bold"
-
         android:textAlignment="viewStart"
-        tools:ignore="RtlCompat,RtlSymmetry" />
+        tools:ignore="RtlCompat,RtlSymmetry"
+
+        app:layout_constraintEnd_toEndOf="@+id/linearLay2"
+        app:layout_constraintStart_toStartOf="@+id/linearLay2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLay2"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerAttendance"/>
+        android:layout_gravity="center"
+        android:layout_margin="18dp"
+        android:id="@+id/recyclerAttendance"
 
-</LinearLayout>
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

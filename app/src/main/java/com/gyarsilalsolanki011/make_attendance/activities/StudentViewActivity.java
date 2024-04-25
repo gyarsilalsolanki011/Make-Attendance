@@ -3,6 +3,7 @@ package com.gyarsilalsolanki011.make_attendance.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -30,7 +31,7 @@ public class StudentViewActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         userId = Objects.requireNonNull(Auth.getCurrentUser()).getUid();
-        DocumentReference documentReference = database.collection("students").document(userId);
+        DocumentReference documentReference = database.collection("Students").document(userId);
         documentReference.addSnapshotListener(this, (value, error) -> {
 
             if (error != null){
@@ -47,7 +48,10 @@ public class StudentViewActivity extends AppCompatActivity {
         });
 
         binding.btnAttendanceView.setOnClickListener(
-                v -> {}
+                v -> {
+                    Intent intent = new Intent(StudentViewActivity.this, AttendanceViewActivity.class);
+                    startActivity(intent);
+                }
         );
 
 
@@ -58,9 +62,11 @@ public class StudentViewActivity extends AppCompatActivity {
         binding.logoutButton.setOnClickListener(
                 v -> {
                     auth.logout();
+                    binding.progressIndicator.setVisibility(View.VISIBLE);
+                    binding.logoutButton.setVisibility(View.GONE);
                     Intent intent = new Intent(StudentViewActivity.this, LoginActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
+                    finish();
                 }
         );
 

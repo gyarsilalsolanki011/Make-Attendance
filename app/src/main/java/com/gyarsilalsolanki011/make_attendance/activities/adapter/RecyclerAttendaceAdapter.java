@@ -13,6 +13,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.gyarsilalsolanki011.make_attendance.R;
 import com.gyarsilalsolanki011.make_attendance.activities.modal.AttendanceModal;
 
+import org.checkerframework.checker.units.qual.A;
+
 import java.util.ArrayList;
 
 public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAttendaceAdapter.ViewHolder>{
@@ -29,18 +31,18 @@ public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAtten
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.attendance_raw, parent, false);
-        ViewHolder viewHolder = new ViewHolder(view);
-
-        return viewHolder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        int Position = position;
-        holder.txtName.setText(arrAttends.get(Position).name);
-        holder.presentBtn.setBottom(arrAttends.get(Position).present);
-        holder.absentBtn.setBottom(arrAttends.get(Position).absent);
+        AttendanceModal modal = arrAttends.get(position);
+
+        holder.fullName.setText(modal.fullName);
+        holder.present.setText(modal.present);
+        holder.absent.setText(modal.absent);
+        holder.percentage.setText(modal.percentage);
 
     }
 
@@ -49,16 +51,14 @@ public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAtten
         return arrAttends.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName;
-        FloatingActionButton presentBtn, absentBtn;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView fullName, percentage, present, absent;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            txtName = itemView.findViewById(R.id.student_name);
-            presentBtn = itemView.findViewById(R.id.button_cancel);
-            absentBtn = itemView.findViewById(R.id.button_cancel);
-
+            fullName = itemView.findViewById(R.id.student_name);
+            percentage = itemView.findViewById(R.id.percentage);
+            present = itemView.findViewById(R.id.present);
+            absent = itemView.findViewById(R.id.absent);
         }
     }
 }
