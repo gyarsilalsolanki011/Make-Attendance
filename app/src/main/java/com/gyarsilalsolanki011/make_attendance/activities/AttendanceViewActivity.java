@@ -23,7 +23,6 @@ public class AttendanceViewActivity extends AppCompatActivity {
     private ActivityAttendanceViewBinding binding;
     private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private  final FirebaseAuth Auth = FirebaseAuth.getInstance();
-
     String userid;
     @SuppressLint("SetTextI18n")
     @Override
@@ -33,6 +32,7 @@ public class AttendanceViewActivity extends AppCompatActivity {
         binding = ActivityAttendanceViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.subjectTextView.setText("Mathematics");
+
+
     }
 }
