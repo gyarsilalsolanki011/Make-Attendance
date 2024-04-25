@@ -1,5 +1,6 @@
 package com.gyarsilalsolanki011.make_attendance.activities.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,15 +35,16 @@ public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAtten
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        AttendanceModal modal = arrAttends.get(position);
+        AttendanceModal modal =(AttendanceModal) arrAttends.get(position);
 
         holder.fullName.setText(modal.fullName);
-        holder.present.setText(modal.present);
-        holder.absent.setText(modal.absent);
-        holder.percentage.setText(modal.percentage);
+        holder.present.setText(modal.present.toString());
+        holder.absent.setText(modal.absent.toString());
+        holder.percentage.setText(modal.percentage.toString());
 
     }
 
