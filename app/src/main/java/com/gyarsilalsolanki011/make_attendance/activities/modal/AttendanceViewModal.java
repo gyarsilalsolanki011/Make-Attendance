@@ -9,28 +9,4 @@ public class AttendanceViewModal {
         this.classesAttended = classesAttended;
         this.classesConducted = classesConducted;
     }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public Integer getClassesAttended() {
-        return classesAttended;
-    }
-
-    public void setClassesAttended(Integer classesAttended) {
-        this.classesAttended = classesAttended;
-    }
-
-    public Integer getClassesConducted() {
-        return classesConducted;
-    }
-
-    public void setClassesConducted(Integer classesConducted) {
-        this.classesConducted = classesConducted;
-    }
 }
