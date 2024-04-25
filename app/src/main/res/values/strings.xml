@@ -13,12 +13,10 @@
     <string name="profileIcon">Profile Icon</string>
     <string name="notification">VIEW NOTIFICATION</string>
     <string name="toastMsg">Notification Integrated Soon..</string>
-
     <string name="faculty">Faculty   :</string>
     <string name="name_exp">Ramesh </string>
     <string name="subject">Subject   :</string>
     <string name="java">JavaScript</string>
-
     <string name="name">Name</string>
     <string name="branch">Branch</string>
     <string name="semester">Semester</string>
@@ -36,4 +34,6 @@
     <string name="logout">Log Out</string>
     <string name="present">Present :</string>
     <string name="absent">Absent :</string>
+    <string name="classes_attended">Classes Attended : </string>
+    <string name="classes_conducted">Classes Conducted : </string>
 </resources>

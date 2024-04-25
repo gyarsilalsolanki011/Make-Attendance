@@ -48,7 +48,10 @@ public class StudentViewActivity extends AppCompatActivity {
         });
 
         binding.btnAttendanceView.setOnClickListener(
-                v -> {}
+                v -> {
+                    Intent intent = new Intent(StudentViewActivity.this, AttendanceViewActivity.class);
+                    startActivity(intent);
+                }
         );
 
 

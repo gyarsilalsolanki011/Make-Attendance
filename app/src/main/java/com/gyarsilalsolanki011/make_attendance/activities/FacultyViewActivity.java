@@ -31,7 +31,7 @@ public class FacultyViewActivity extends AppCompatActivity{
     private  final FirebaseAuth Auth = FirebaseAuth.getInstance();
     private ActivityFacultyViewBinding binding;
     ProgressDialog progressDialog;
-    String whichSubject, userid;
+    String userid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,9 +72,8 @@ public class FacultyViewActivity extends AppCompatActivity{
             }
 
             assert value != null;
-            whichSubject = value.getString("subject");
             binding.facultyNameSet.setText(value.getString("fullName"));
-            binding.subjectSet.setText(whichSubject);
+            binding.subjectSet.setText(value.getString("subject"));
             if (progressDialog.isShowing()) progressDialog.dismiss();
 
         });

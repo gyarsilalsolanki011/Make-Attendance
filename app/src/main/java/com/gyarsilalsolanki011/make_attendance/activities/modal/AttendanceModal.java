@@ -3,7 +3,7 @@ package com.gyarsilalsolanki011.make_attendance.activities.modal;
 public class AttendanceModal {
 
     public String fullName;
-    public int present, absent, percentage;
+    public Integer present, absent, percentage;
 
     public String getFullName() {
         return fullName;
