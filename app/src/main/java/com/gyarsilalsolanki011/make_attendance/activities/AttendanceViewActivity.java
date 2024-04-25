@@ -1,5 +1,6 @@
 package com.gyarsilalsolanki011.make_attendance.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -19,12 +20,12 @@ import java.util.Objects;
 
 public class AttendanceViewActivity extends AppCompatActivity {
     ArrayList<AttendanceViewModal> arrayListAttendance;
-    public ArrayList<SubjectType> subjectList;
     private ActivityAttendanceViewBinding binding;
     private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private  final FirebaseAuth Auth = FirebaseAuth.getInstance();
 
     String userid;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,6 @@ public class AttendanceViewActivity extends AppCompatActivity {
         binding = ActivityAttendanceViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        subjectList.add(SubjectType.Mathematics);
-        subjectList.add(SubjectType.ImageProcessing);
-
+        binding.subjectTextView.setText("Mathematics");
     }
 }
