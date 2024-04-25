@@ -59,6 +59,16 @@ public class FacultyViewActivity extends AppCompatActivity{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        arrAttends.add(new AttendanceModal("Shyam", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Rajesh", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Gyarsilal", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Suresh", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Mohan", 1, 1,1));
+        arrAttends.add(new AttendanceModal("ram", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Suresh", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Mohan", 1, 1,1));
+        arrAttends.add(new AttendanceModal("ram", 1, 1,1));
+
         //setDataOnRecyclerViewLayout();
 
         adapter = new RecyclerAttendaceAdapter(this,arrAttends);

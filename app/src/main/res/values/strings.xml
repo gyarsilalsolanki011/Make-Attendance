@@ -36,4 +36,5 @@
     <string name="absent">Absent :</string>
     <string name="classes_attended">Classes Attended : </string>
     <string name="classes_conducted">Classes Conducted : </string>
+    <string name="subjectViceAttendance">Subject Wise Attendance</string>
 </resources>

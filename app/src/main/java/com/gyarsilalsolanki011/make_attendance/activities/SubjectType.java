@@ -1,6 +1,9 @@
 package com.gyarsilalsolanki011.make_attendance.activities;
 
 public enum SubjectType {
-    Mathematics,
+    MachineLearning,
     ImageProcessing,
+    ComputerNetworking,
+    MobileComputing,
+    SoftwareEngineering,
 }
