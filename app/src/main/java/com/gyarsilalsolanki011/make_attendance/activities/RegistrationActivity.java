@@ -80,7 +80,11 @@ public class RegistrationActivity extends AppCompatActivity {
                             result -> {
                                 if (whoReg) {
                                     user.setStudentData(User.student(email, fullName, sub_or_roll, branch));
-                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0));
+                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.MachineLearning.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.ImageProcessing.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.ComputerNetworking.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.MobileComputing.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.SoftwareEngineering.toString());
                                     Intent iStudentView = new Intent(RegistrationActivity.this, LoginActivity.class);
                                     startActivity(iStudentView);
                                 }

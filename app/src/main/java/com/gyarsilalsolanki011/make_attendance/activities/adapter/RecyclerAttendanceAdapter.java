@@ -14,15 +14,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.gyarsilalsolanki011.make_attendance.R;
 import com.gyarsilalsolanki011.make_attendance.activities.modal.AttendanceModal;
 
-import org.checkerframework.checker.units.qual.A;
-
 import java.util.ArrayList;
 
-public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAttendaceAdapter.ViewHolder>{
+public class RecyclerAttendanceAdapter extends RecyclerView.Adapter<RecyclerAttendanceAdapter.ViewHolder>{
 
     Context context;
     ArrayList<AttendanceModal> arrAttends;
-    public RecyclerAttendaceAdapter(Context context, ArrayList<AttendanceModal> arrAttends) {
+
+    public RecyclerAttendanceAdapter(Context context, ArrayList<AttendanceModal> arrAttends) {
         this.context = context;
         this.arrAttends = arrAttends;
     }
@@ -46,6 +45,27 @@ public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAtten
         holder.absent.setText(modal.absent.toString());
         holder.percentage.setText(modal.percentage.toString());
 
+        holder.presentBtn.setOnClickListener(
+                v -> {
+                    updatePresentData(modal);
+                    holder.present.setText(modal.present.toString());
+                    holder.absent.setText(modal.absent.toString());
+                    updatePercentageData(modal);
+                    holder.percentage.setText(modal.percentage.toString());
+                }
+
+        );
+
+        holder.absentBtn.setOnClickListener(
+                v -> {
+                    updateAbsentData(modal);
+                    holder.present.setText(modal.present.toString());
+                    holder.absent.setText(modal.absent.toString());
+                    updatePercentageData(modal);
+                    holder.percentage.setText(modal.percentage.toString());
+                }
+        );
+
     }
 
     @Override
@@ -55,12 +75,30 @@ public class RecyclerAttendaceAdapter extends RecyclerView.Adapter<RecyclerAtten
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView fullName, percentage, present, absent;
+        FloatingActionButton presentBtn, absentBtn;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fullName = itemView.findViewById(R.id.student_name);
             percentage = itemView.findViewById(R.id.percentage);
             present = itemView.findViewById(R.id.present);
             absent = itemView.findViewById(R.id.absent);
+
+            presentBtn = itemView.findViewById(R.id.button_mark);
+            absentBtn = itemView.findViewById(R.id.button_cancel);
         }
+    }
+
+    private void updatePresentData(AttendanceModal modal) {
+        modal.present += 1;
+    }
+
+    private void updateAbsentData(AttendanceModal modal) {
+        modal.absent += 1;
+    }
+
+    private void updatePercentageData(AttendanceModal modal) {
+
+        modal.percentage = (modal.present/(modal.present+modal.absent)) * 100;
+
     }
 }
