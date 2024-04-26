@@ -35,7 +35,7 @@ public class RecyclerAttendanceViewAdapter extends RecyclerView.Adapter<Recycler
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        AttendanceViewModal modal = arrayListAttendance.get(position);
+        AttendanceViewModal modal = (AttendanceViewModal) arrayListAttendance.get(position);
 
         holder.subject.setText(modal.subject);
         holder.classesConducted.setText(modal.classesConducted.toString());

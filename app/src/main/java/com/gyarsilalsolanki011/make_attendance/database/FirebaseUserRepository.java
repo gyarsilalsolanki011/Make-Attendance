@@ -16,7 +16,7 @@ public class FirebaseUserRepository implements UserRepository {
     private final CollectionReference studentCollection = database.collection("Students");
     private final CollectionReference facultyCollection = database.collection("Faculties");
 
-    private final CollectionReference attendanceCollection = database.collection("Mathematics");
+    private CollectionReference attendanceCollection;
     private final static String TAG = "FIREBASE USER REPOSITORY";
 
     @Override
@@ -61,7 +61,10 @@ public class FirebaseUserRepository implements UserRepository {
     }
 
     @Override
-    public void setAttendanceData(User userData) {
+    public void setAttendanceData(User userData, String subject) {
+
+        attendanceCollection = database.collection(subject);
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             Task<Void> task = attendanceCollection.document(user.getUid()).set(userData.toMapAttendance());
