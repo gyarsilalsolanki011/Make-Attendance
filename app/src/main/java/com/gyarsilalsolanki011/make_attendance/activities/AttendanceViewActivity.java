@@ -23,7 +23,6 @@ public class AttendanceViewActivity extends AppCompatActivity {
     private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private  final FirebaseAuth Auth = FirebaseAuth.getInstance();
     RecyclerAttendanceViewAdapter adapter;
-    String userid;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +31,7 @@ public class AttendanceViewActivity extends AppCompatActivity {
         binding = ActivityAttendanceViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //setOnRecyclerView();
 
     }
 
@@ -41,6 +41,11 @@ public class AttendanceViewActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        arrayListAttendance.add(new AttendanceViewModal("Maths",1,1));
+        arrayListAttendance.add(new AttendanceViewModal("Maths",1,1));
+        arrayListAttendance.add(new AttendanceViewModal("Maths",1,1));
+        arrayListAttendance.add(new AttendanceViewModal("Maths",1,1));
+        arrayListAttendance.add(new AttendanceViewModal("Maths",1,1));
         arrayListAttendance.add(new AttendanceViewModal("Maths",1,1));
 
         adapter = new RecyclerAttendanceViewAdapter(this, arrayListAttendance);

@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.gyarsilalsolanki011.make_attendance.R;
-import com.gyarsilalsolanki011.make_attendance.activities.adapter.RecyclerAttendaceAdapter;
+import com.gyarsilalsolanki011.make_attendance.activities.adapter.RecyclerAttendanceAdapter;
 import com.gyarsilalsolanki011.make_attendance.activities.modal.AttendanceModal;
 import com.gyarsilalsolanki011.make_attendance.auth.FirebaseAuthRepository;
 import com.gyarsilalsolanki011.make_attendance.databinding.ActivityFacultyViewBinding;
@@ -28,7 +27,7 @@ import java.util.Objects;
 
 public class FacultyViewActivity extends AppCompatActivity{
     ArrayList<AttendanceModal> arrAttends = new ArrayList<>();
-    RecyclerAttendaceAdapter adapter;
+    RecyclerAttendanceAdapter adapter;
     private final FirebaseAuthRepository auth = new FirebaseAuthRepository();
     private final FirebaseFirestore database = FirebaseFirestore.getInstance();
     private  final FirebaseAuth Auth = FirebaseAuth.getInstance();
@@ -59,19 +58,19 @@ public class FacultyViewActivity extends AppCompatActivity{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        arrAttends.add(new AttendanceModal("Shyam", 1, 1,1));
-        arrAttends.add(new AttendanceModal("Rajesh", 1, 1,1));
-        arrAttends.add(new AttendanceModal("Gyarsilal", 1, 1,1));
-        arrAttends.add(new AttendanceModal("Suresh", 1, 1,1));
-        arrAttends.add(new AttendanceModal("Mohan", 1, 1,1));
-        arrAttends.add(new AttendanceModal("ram", 1, 1,1));
-        arrAttends.add(new AttendanceModal("Suresh", 1, 1,1));
-        arrAttends.add(new AttendanceModal("Mohan", 1, 1,1));
-        arrAttends.add(new AttendanceModal("ram", 1, 1,1));
+        arrAttends.add(new AttendanceModal("Vijen Jatav", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Rajesh varkhade", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Gyarsilal Solanki", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Suresh Chouhan", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Mohan More", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Shyam More", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Suresh Raina", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Mohan Yadav", 0, 0,0));
+        arrAttends.add(new AttendanceModal("Abhishek Porel", 0, 0,0));
 
         //setDataOnRecyclerViewLayout();
 
-        adapter = new RecyclerAttendaceAdapter(this,arrAttends);
+        adapter = new RecyclerAttendanceAdapter(this,arrAttends);
         recyclerView.setAdapter(adapter);
     }
 
