@@ -89,8 +89,8 @@ public class AttendanceViewActivity extends AppCompatActivity {
             }
 
             assert value != null;
-            classConducted.setText("   6");
-            classAttended.setText("   5");
+            classConducted.setText("  8");
+            classAttended.setText("  4");
 
         });
     }
