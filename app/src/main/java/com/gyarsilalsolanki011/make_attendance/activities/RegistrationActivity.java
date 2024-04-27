@@ -80,19 +80,21 @@ public class RegistrationActivity extends AppCompatActivity {
                             result -> {
                                 if (whoReg) {
                                     user.setStudentData(User.student(email, fullName, sub_or_roll, branch));
-                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.MachineLearning.toString());
-                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.ImageProcessing.toString());
-                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.ComputerNetworking.toString());
-                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.MobileComputing.toString());
-                                    user.setAttendanceData(User.Attendance(fullName, 0,0,0),SubjectType.SoftwareEngineering.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 5,6,0),SubjectType.MachineLearning.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 3,4,0),SubjectType.ImageProcessing.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 7,7,0),SubjectType.ComputerNetworking.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 8,7,0),SubjectType.MobileComputing.toString());
+                                    user.setAttendanceData(User.Attendance(fullName, 7,8,0),SubjectType.SoftwareEngineering.toString());
                                     Intent iStudentView = new Intent(RegistrationActivity.this, LoginActivity.class);
                                     startActivity(iStudentView);
+                                    finish();
                                 }
                                 else {
                                     user.setFacultyData(User.faculty(email, fullName, sub_or_roll, branch));
                                     Intent iFacultyView = new Intent(RegistrationActivity.this, LoginActivity.class);
                                     iFacultyView.putExtra("whoLogin",false);
                                     startActivity(iFacultyView);
+                                    finish();
                                 }
                             });
 
