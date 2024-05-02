@@ -40,10 +40,10 @@ public class RecyclerAttendanceAdapter extends RecyclerView.Adapter<RecyclerAtte
 
         AttendanceModal modal =(AttendanceModal) arrAttends.get(position);
 
-        holder.fullName.setText(modal.fullName);
-        holder.present.setText(modal.present.toString());
-        holder.absent.setText(modal.absent.toString());
-        holder.percentage.setText(modal.percentage.toString());
+        holder.fullName.setText(modal.getFullName());
+        holder.present.setText(modal.getPresent().toString());
+        holder.absent.setText(modal.getAbsent().toString());
+        holder.percentage.setText(modal.getPercentage().toString());
 
         holder.presentBtn.setOnClickListener(
                 v -> {

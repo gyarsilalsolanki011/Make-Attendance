@@ -37,9 +37,9 @@ public class RecyclerAttendanceViewAdapter extends RecyclerView.Adapter<Recycler
 
         AttendanceViewModal modal = (AttendanceViewModal) arrayListAttendance.get(position);
 
-        holder.subject.setText(modal.subject);
-        holder.classesConducted.setText(modal.classesConducted.toString());
-        holder.classesAttended.setText(modal.classesAttended.toString());
+        holder.subject.setText(modal.getSubject());
+        holder.classesConducted.setText(modal.getClassesConducted().toString());
+        holder.classesAttended.setText(modal.getClassesAttended().toString());
 
     }
     @Override

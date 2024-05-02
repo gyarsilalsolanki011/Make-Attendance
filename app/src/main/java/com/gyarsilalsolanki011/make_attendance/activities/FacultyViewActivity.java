@@ -45,6 +45,7 @@ public class FacultyViewActivity extends AppCompatActivity{
                 v -> {
                     auth.logout();
                     Intent intent = new Intent(FacultyViewActivity.this, LoginActivity.class);
+                    intent.putExtra("whoLogin",false);
                     startActivity(intent);
                     finish();
                 }
@@ -58,15 +59,15 @@ public class FacultyViewActivity extends AppCompatActivity{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        arrAttends.add(new AttendanceModal("Vijen Jatav", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Rajesh varkhade", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Gyarsilal Solanki", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Suresh Chouhan", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Mohan More", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Shyam More", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Suresh Raina", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Mohan Yadav", 0, 0,0));
-        arrAttends.add(new AttendanceModal("Abhishek Porel", 0, 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Vijen Jatav", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Rajesh varkhade", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Gyarsilal Solanki", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Suresh Chouhan", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Mohan More", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Shyam More", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Suresh Raina", 0,0));
+        arrAttends.add(new AttendanceModal( 0,"Mohan Yadav",0,0));
+        arrAttends.add(new AttendanceModal( 0,"Abhishek Porel", 0,0));
 
         //setDataOnRecyclerViewLayout();
 
