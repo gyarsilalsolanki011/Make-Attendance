@@ -59,15 +59,15 @@ public class FacultyViewActivity extends AppCompatActivity{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        arrAttends.add(new AttendanceModal( 0,"Vijen Jatav", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Rajesh varkhade", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Gyarsilal Solanki", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Suresh Chouhan", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Mohan More", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Shyam More", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Suresh Raina", 0,0));
-        arrAttends.add(new AttendanceModal( 0,"Mohan Yadav",0,0));
-        arrAttends.add(new AttendanceModal( 0,"Abhishek Porel", 0,0));
+        arrAttends.add(new AttendanceModal( 4,"Vijen Jatav", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Rajesh varkhade",50,4));
+        arrAttends.add(new AttendanceModal( 4,"Gyarsilal Solanki", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Suresh Chouhan", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Mohan More", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Shyam More", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Suresh Raina", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Mohan Yadav", 50,4));
+        arrAttends.add(new AttendanceModal( 4,"Abhishek Porel", 50,4));
 
         //setDataOnRecyclerViewLayout();
 
